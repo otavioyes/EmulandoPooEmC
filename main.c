@@ -40,12 +40,26 @@ void printDate(const struct Date *dt)//chamando a função Date dt
     }
 }
 
+/*
+ *PRINCIPAIS FALTAS/EMULAR DE POO EM C
+
+ * 1. Não há como forçar a iniciallização
+ * 2. Todas as propriedades das funcções são públicas
+ * 3. As funções são como outras quaisquer, funcções globais.
+
+
+*/
+
+
+
 int main()
 {
     struct Date pgt;
-    initDate(&pgt);
 
-    changeData(&pgt, 12,12,2099);
+   //printDate(&pgt);
+    //initDate(&pgt);
+    changeData(&pgt, 12,25,2099);
+    pgt.valid = 1;
     printDate(&pgt); //chamando a função printDate
 
     printf("Size: %llu\n", sizeof(pgt));
